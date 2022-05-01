@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.mySlides {display: none}
+</style>
+<style>
+
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+input[type=submit] {
+  width: 80%;
+  background-color: #e15d44;
+  color:black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size:100;
+  font-weight: bolder;
+}
+
+
+input[type=submit]:hover {
+  background-color: #9B2335;
+}
+form{
+    border-radius: 10px;
+    padding-top: 5%;
+    font-weight: bolder;
+}
+div {
+
+  border-radius: 5px;
+  margin-left: 35%;
+  width: 30%;
+
+}
+h1{
+    color: #DD4124;
+    font-size: 40px;
+    font-weight: bolder;
+}
+h3{
+  color: white;
+  font-size: 35px
+}
+
+body {
+
+            background-image: url("https://cdn.dribbble.com/users/1019942/screenshots/6023740/anti_fraud_dashboard_4x.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 0px;
+        }
+
+</style>
+
+<body>
+
+<h1>Fraud Detection</h1>
+
+<div>
+ <!-- Html form which will get all the values from user -->
+ <form action="{{ url_for('predict')}}" method="post" style="background-color:#E6E6FA">
+
+
+<label for="V3">V3 Value</label><br>
+<input type="text" id="V3" name="V3" placeholder="Please enter the V3 Value" required="required"><br>
+<label for="V4">V4 Value</label><br>
+<input type="text" id="V4" name="V4" placeholder="Please enter the V4 Value" required="required"><br>
+<label for="V7">V7 Value</label><br>
+<input type="text" id="V7" name="V7" placeholder="Please enter the V7 Value" required="required"><br>
+<label for="V10">V10 Value</label><br>
+<input type="text" id="V10" name="V10" placeholder="Please enter the V10 Value" required="required"><br>
+<label for="V11">V11 Value</label><br>
+<input type="text" id="V11" name="V11" placeholder="Please enter the V11 Value" required="required"><br>
+<label for="V12">V12 Value</label><br>
+<input type="text" id="V12" name="V12" placeholder="Please enter the V12 Value" required="required"><br>
+<label for="V14">V14 Value</label><br>
+<input type="text" id="V14" name="V14" placeholder="Please enter the V14 Value" required="required"><br>
+<label for="V16">V16 Value</label><br>
+<input type="text" id="V16" name="V16" placeholder="Please enter the V16 Value" required="required"><br>
+<label for="V17">V17 Value</label><br>
+<input type="text" id="V17" name="V17" placeholder="Please enter the V17 Value" required="required"><br>
+<label for="Amount">Amount Value</label><br>
+<input type="text" id="Amount" name="Amount" placeholder="Please enter the amount Value" required="required"><br>        
+
+
+
+<!-- submit button -->
+<input type="submit" value="Predict">
+</form>
+</div>
+
+<!-- the predicted text -->
+<h3 style="color:red">{{ prediction_text }}</h3>
+
+</body>
+</html>
